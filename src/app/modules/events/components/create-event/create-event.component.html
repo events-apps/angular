@@ -1,0 +1,30 @@
+<div class="w-full">
+  <h1 class="font-bold text-xl text-gray-800 mb-4">Create event</h1>
+  <form [formGroup]="formGroup" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <label class="block text-gray-700 text-sm font-semibold mb-4" for="event-name">
+      <span class="block mb-2">Name</span>
+      <input
+        class="shadow appearance-none border rounded block w-full max-w-sm py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="event-name" formControlName="name" type="text" placeholder="Event name" />
+    </label>
+    <label class="block text-gray-700 text-sm font-semibold mb-4" for="event-description">
+      <span class="block mb-2">Description</span>
+      <textarea
+        class="resize-none shadow appearance-none border rounded block w-full max-w-sm h-20 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="event-description" formControlName="description" placeholder="Event description..."></textarea>
+    </label>
+    <div class="flex items-center">
+      <div class="mr-2">
+        <button type="submit" class="py-2 px-4 rounded bg-teal-500 hover:bg-teal-700 text-white"
+          (click)="handleSubmit()">
+          <fa-icon icon="save" class="mr-1"></fa-icon>
+          Save
+        </button>
+      </div>
+      <button type="button" class="py-2 px-4 rounded bg-transparent text-teal-500 hover:text-teal-700"
+        (click)="handleCancel()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
